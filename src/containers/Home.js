@@ -1,18 +1,36 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
-//
-import logoImg from '../logo.png'
+import ReactHtmlParser from 'react-html-parser'
+import ContactForm from '../components/ContactForm'
+
 import jpImg from '../containers/img/jp_image_face.jpg'
 
-const JP_Email = () => <a href={'mailto:panjona@gmail.com'}>panjona@gmail.com</a>
+import Slider from 'react-slick'
 
-export default withSiteData(() => (
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  autoplay: true,
+  autoplaySpeed: 8000
+  // slidesToShow: 1,
+  // slidesToScroll: 1
+}
+
+const Images = () =>
+  <Slider {...settings}>
+    <div>
+      <img src="https://i.imgur.com/AyXUl3Xl.jpg" style={{ maxHeight: '450px' }}/>
+    </div>
+    <div>
+      <img src="https://i.imgur.com/aIxOsFWl.jpg" style={{ maxHeight: '450px' }}/>
+    </div>
+  </Slider>
+
+export default withSiteData(({ phoneNumber, aboutHtml }) => (
   <div className={'container'}>
     <div className="row">
       <div className="col-12">
-        <br/>
-        <br/>
-        <br/>
       </div>
       <div className="col-md-3">
         <img src={jpImg} className={'rounded jp-image img-thumbnail'}/>
@@ -20,14 +38,15 @@ export default withSiteData(() => (
           <br/>
         </div>
       </div>
-      <div className="col-md-9 align-self-end">
-        <h1>Jonathan Pan</h1>
-        <h3>Real Estate Agent - Southeast Michigan </h3>
-        <h5>Email: <JP_Email/></h5>
-        <h5>Mobile #: (734) 717-8336</h5>
-        <h5>WeChat: panjona</h5>
+      <div className="col-md-9 align-self-center">
+        <h3>Jonathan Pan</h3>
+        <span>{ReactHtmlParser(aboutHtml)}</span>
       </div>
       <div className="col-12">
+        <Images/>
+      </div>
+      <div className="col-12">
+        <ContactForm/>
       </div>
     </div>
   </div>

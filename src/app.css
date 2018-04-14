@@ -1,36 +1,46 @@
-/*body {*/
-    /*font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,*/
-    /*'Lucida Grande', sans-serif;*/
-    /*font-weight: 300;*/
-    /*font-size: 16px;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-/*}*/
 
-/*a {*/
-    /*text-decoration: none;*/
-    /*color: #108db8;*/
-    /*font-weight: bold;*/
-/*}*/
+.slick-slide .image {
+    padding: 10px;
+}
 
-/*img {*/
-    /*max-width: 100%;*/
-/*}*/
+.slick-slide img {
+    border: 5px solid #fff;
+    display: block;
+    margin: auto;
+}
 
-/*nav {*/
-    /*width: 100%;*/
-    /*background: #108db8;*/
-/*}*/
+.slick-slide img.slick-loading {
+    border: 0;
+}
 
-/*nav a {*/
-    /*color: white;*/
-    /*padding: 1rem;*/
-    /*display: inline-block;*/
-/*}*/
+.slick-slider {
+    margin: 30px auto;
+}
 
-/*.content {*/
-    /*padding: 1rem;*/
-/*}*/
+.slick-dots {
+    margin-left: 0;
+}
+
+.slick-thumb {
+    bottom: -45px;
+}
+
+.slick-thumb li {
+    width: 60px;
+    height: 45px;
+}
+
+.slick-thumb li img {
+    filter: grayscale(100%);
+}
+
+.slick-thumb li.slick-active img {
+    filter: grayscale(0%);
+}
+
+.slick-vertical .slick-slide {
+    height: 180px;
+}
 
 .jp-image {
     -webkit-box-shadow: 10px 10px 9px 0px rgba(0, 0, 0, 0.75);

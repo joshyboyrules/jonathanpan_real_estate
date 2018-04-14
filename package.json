@@ -1,5 +1,5 @@
 {
-  "name": "react-static-example-basic",
+  "name": "jonathanpan_realestate",
   "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
@@ -7,15 +7,27 @@
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
-    "serve": "serve dist -p 3000"
+    "serve": "serve dist -p 3000",
+    "deploy": "yarn run build && now ./dist --local-config ../now.json && now alias --local-config ../now.json"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.4",
+    "@fortawesome/fontawesome-free-brands": "^5.0.8",
+    "@fortawesome/react-fontawesome": "^0.0.17",
     "axios": "^0.16.2",
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-hot-loader": "^4.0.0-beta.21",
+    "react-html-parser": "^2.0.2",
+    "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
-    "react-static": "^5.6.2"
+    "react-slick": "^0.22.3",
+    "react-static": "^5.6.2",
+    "recompose": "^0.26.0",
+    "redux": "^3.7.2",
+    "redux-form": "^7.3.0"
   },
   "devDependencies": {
     "eslint-config-react-tools": "1.x.x",
